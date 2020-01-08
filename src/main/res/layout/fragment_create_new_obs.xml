@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:background="@android:color/white"
+android:layoutDirection="rtl"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/step_view"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:paddingBottom="5dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:sv_animationType="All"
+        app:sv_doneCircleColor="@color/toolbar_color"
+        app:sv_doneStepLineColor="@color/colorPrimary"
+        app:sv_doneStepMarkColor="@android:color/white"
+        app:sv_doneTextColor="@color/colorPrimary"
+        app:sv_nextStepLineColor="@color/toolbar_color"
+        app:sv_nextTextColor="@color/colorPrimary"
+        app:sv_selectedCircleColor="@color/toolbar_color"
+        app:sv_selectedStepNumberColor="@android:color/white"
+        app:sv_selectedTextColor="@color/colorPrimary"
+        app:sv_textSize="14dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/RfirstDate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/first_data"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bt_submit"
+            android:background="@android:color/white"
+            android:clipToPadding="false"
+            android:padding="@dimen/spacing_mlarge"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/item_photo_insert" android:visibility="gone"></include>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+
+                    android:text="نام کاربری"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/grey_60" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="fill_parent"
+                    android:id="@+id/o_username"
+                    android:tag="ud_name"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:nextFocusDown="@+id/o_password"
+
+                    android:background="@drawable/shape_edit_text_round_bg_white"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:text="رمز عبور"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/grey_60" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="fill_parent"
+                    android:id="@+id/o_password"
+                    android:tag="ud_national_code"
+                    android:inputType="text"
+                    android:nextFocusDown="@+id/o_name"
+
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edit_text_round_bg_white"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:text="نام"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/grey_60" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/o_name"
+                    android:nextFocusDown="@+id/o_phonenum"
+
+                    android:tag="ud_email"
+                    android:inputType="text"
+                    android:background="@drawable/shape_edit_text_round_bg_white"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:hint=""
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:text="شماره تلفن همراه"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/grey_60" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/o_phonenum"
+                    android:tag="ud_email"
+                    android:inputType="number"
+                    android:background="@drawable/shape_edit_text_round_bg_white"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:hint="مثال: 09151234567"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_medium"
+                            android:text="جنسیت"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/grey_60" />
+
+                        <EditText
+                            android:id="@+id/o_gender"
+                            android:tag="ud_sex"
+                            style="@style/EditText.Flat.Grey"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_xmlarge"
+                            android:background="@drawable/shape_edit_text_round_bg_white"
+                            android:drawableEnd="@drawable/ic_expand_arrow"
+                            android:drawableRight="@drawable/ic_expand_arrow"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:minHeight="@dimen/spacing_xmlarge"
+                            android:paddingLeft="@dimen/spacing_middle"
+                            android:paddingRight="@dimen/spacing_middle" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0.0dip" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_medium"
+                            android:text="تاریخ تولد"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/grey_60" />
+
+                        <EditText
+                            android:id="@+id/o_birthday"
+                            android:tag="o_birthday"
+                            style="@style/EditText.Flat.Grey"
+                            android:focusable="false"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/spacing_xmlarge"
+                            android:drawableEnd="@drawable/ic_expand_arrow"
+                            android:drawableRight="@drawable/ic_expand_arrow"
+                            android:background="@drawable/shape_edit_text_round_bg_white"
+
+                            android:minHeight="@dimen/spacing_xmlarge"
+                            android:paddingLeft="@dimen/spacing_middle"
+                            android:paddingRight="@dimen/spacing_middle" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_medium"
+                            android:text="تخصص"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/grey_60" />
+
+                        <EditText
+                            android:id="@+id/o_specialty"
+                            android:tag="ud_sex"
+                            style="@style/EditText.Flat.Grey"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/spacing_xmlarge"
+
+                            android:background="@drawable/shape_edit_text_round_bg_white"
+                            android:drawableEnd="@drawable/ic_expand_arrow"
+                            android:drawableRight="@drawable/ic_expand_arrow"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:minHeight="@dimen/spacing_xmlarge"
+                            android:paddingLeft="@dimen/spacing_middle"
+                            android:paddingRight="@dimen/spacing_middle" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0.0dip" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:visibility="invisible"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_medium"
+                            android:text="زبان"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/grey_60" />
+
+                        <EditText
+                            android:id="@+id/e_lang"
+                            android:tag="ud_birthday"
+                            style="@style/EditText.Flat.Grey"
+                            android:focusable="false"
+                            android:layout_width="fill_parent"
+                            android:drawableEnd="@drawable/ic_expand_arrow"
+                            android:drawableRight="@drawable/ic_expand_arrow"
+                            android:layout_height="@dimen/spacing_xmlarge"
+                            android:background="@drawable/shape_edit_text_round_bg_white"
+                            android:minHeight="@dimen/spacing_xmlarge"
+                            android:paddingLeft="@dimen/spacing_middle"
+                            android:paddingRight="@dimen/spacing_middle" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/bt_submit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginStart="@dimen/spacing_mlarge"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_mlarge"
+            android:layout_marginBottom="@dimen/spacing_mlarge"
+            android:background="@drawable/button_blue_gradiant"
+            android:text="تایید"
+            android:textAllCaps="false"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <!--  app:sv_doneCircleColor="@color/selected_cardview_text"
+        app:sv_doneStepLineColor="@color/selected_cardview_text"
+
+        app:sv_doneTextColor="@color/text_color"
+        app:sv_nextStepLineColor="@color/selected_cardview_text"
+        app:sv_nextTextColor="@color/text_color"
+        app:sv_selectedCircleColor="@color/selected_cardview_text"
+        app:sv_selectedTextColor="@color/text_color"
+        -->
+
+
+</LinearLayout>

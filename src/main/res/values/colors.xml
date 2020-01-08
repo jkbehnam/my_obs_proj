@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="toolbar_txt">#000000</color>
+    <color name="toolbar_color">#EA514D</color>
+    <color name="indigo_900">#1A237E</color>
+<color name="main_background">#ffffff</color>
+    <color name="second_color">#BCBCBC</color>
+    <color name="text_color_all">#545E75</color>
+    <color name="text_color_second">#B4545E75</color>
+    <color name="allOkButton">@color/colorAccent</color>
+    <color name="background">@color/main_background</color>
+    <color name="allOkButtonTxt">#ffffff</color>
+    <color name="textColor">@color/grey_60</color>
+    <color name="grey_60">#ff666666</color>
+    <color name="grey_90">#ff263238</color>
+    <color name="grey_40">#ff999999</color>
+    <color name="grey_10">#ffe6e6e6</color>
+    <color name="grey_5">#fff2f2f2</color>
+    <color name="status_bar">@android:color/white</color>
+    <color name="main_color">#03aced</color>
+    <color name="orange_400">#FFA726</color>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Obs games</string>
+    <string name="username">نام کاربری</string>
+    <string name="password">رمز عبور</string>
+    <string name="Login">ورود</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="go_to_settings">GOTO SETTINGS</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="msg_error_unable_select_profile_pic">Unable to set profile image. Please try again!</string>
+    <string name="lbl_set_profile_photo">انتخاب تصویر</string>
+    <string name="lbl_take_camera_picture">عکس برداری</string>
+    <string name="lbl_choose_from_gallery">انتخاب از حافظه دستگاه</string>
+</resources>
